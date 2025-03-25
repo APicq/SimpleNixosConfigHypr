@@ -1,0 +1,21 @@
+{
+  ...
+}:
+{
+  imports = [
+    ./hyprland
+    ./starship.nix
+    ./alacritty.nix
+    ./zsh.nix
+    ./bat.nix
+    ./gtk.nix
+    ./btop.nix
+    ./scripts
+    ./xdg.nix
+    ./packages.nix
+    ./secrets.nix
+    ./helix.nix
+    ./emacs.nix
+    ./syncthing.nix
+  ];
+}
