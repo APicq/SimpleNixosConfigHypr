@@ -8,6 +8,7 @@
 }:
 let
   base16_extracted = import ./base16.nix;
+  colors = import ./colors.nix;
   inherit
     browser
     default_user
@@ -54,8 +55,8 @@ in
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        "col.active_border" = "rgb(${base16_extracted.base08}) rgb(${base16_extracted.base0C}) 45deg";
-        "col.inactive_border" = "rgb(${base16_extracted.base01})";
+        "col.active_border" = "rgb(${colors.active_border})";
+        "col.inactive_border" = "rgb(${colors.inactive_border})";
       };
 
       misc = {
@@ -71,7 +72,7 @@ in
       };
 
       decoration = {
-        rounding = 10;
+        rounding = 5;
         blur = {
           enabled = true;
           size = 5;

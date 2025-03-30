@@ -17,6 +17,7 @@ with pkgs;
     vlc
     zed-editor
     zola
+    ironbar
   ];
 }
     # wineWowPackages.stable
