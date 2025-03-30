@@ -20,7 +20,7 @@
     {
       nixosConfigurations."${host}" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [	  
+        modules = [
           ./core
           home-manager.nixosModules.home-manager
           {
@@ -28,7 +28,15 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             home-manager.extraSpecialArgs = {
-              inherit inputs default_user host browser;
+              inherit
+                inputs
+                default_user
+                host
+                browser
+                extraMonitorSettings
+                terminal
+                keyboardLayout
+                ;
             };
             home-manager.users.apic = {
               home = {

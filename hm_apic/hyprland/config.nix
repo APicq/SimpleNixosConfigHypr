@@ -1,12 +1,20 @@
-{ browser,... }:
+{
+  browser,
+  default_user,
+  terminal,
+  extraMonitorSettings,
+  keyboardLayout,
+  ...
+}:
 let
-  username = "apic";
-  #browser = "firefox";
-  terminal = "alacritty";
-  extraMonitorSettings = "";
-  keyboardLayout = "fr";
   base16_extracted = import ./base16.nix;
-  inherit browser;
+  inherit
+    browser
+    default_user
+    terminal
+    extraMonitorSettings
+    keyboardLayout
+    ;
 in
 {
   wayland.windowManager.hyprland = {
@@ -19,7 +27,7 @@ in
         "killall -q swaync;sleep .5 && swaync"
         "nm-applet --indicator"
         "lxqt-policykit-agent"
-        "sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/dark_mountain_small.jpg"
+        "sleep 1.5 && swww img /home/${default_user}/Pictures/Wallpapers/dark_mountain_small.jpg"
       ];
 
       input = {
