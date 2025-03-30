@@ -69,6 +69,7 @@
     ripgrep-all
     socat
     sysfsutils
+    trashy
     unrar
     unzip
     usbutils

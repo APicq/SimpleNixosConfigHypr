@@ -1,11 +1,12 @@
-{ ... }:
+{ browser,... }:
 let
   username = "apic";
-  browser = "firefox";
+  #browser = "firefox";
   terminal = "alacritty";
   extraMonitorSettings = "";
   keyboardLayout = "fr";
   base16_extracted = import ./base16.nix;
+  inherit browser;
 in
 {
   wayland.windowManager.hyprland = {

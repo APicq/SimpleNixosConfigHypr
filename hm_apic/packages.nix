@@ -2,26 +2,26 @@
 with pkgs;
 {
   home.packages= [
-    keepassxc
-    imagemagick
-    zola
     blender
+    freecad-wayland
+    gh
+    imagemagick
+    keepassxc
+    libreoffice-fresh
+    nh
+    nomacs
+    okular
+    rust-script
+    samba
+    tor-browser
+    vlc
     zed-editor
+    zola
+  ];
+}
     # wineWowPackages.stable
     # digikam
     # not working :
     # geeqie
     # gthumb
-    nomacs
-    libreoffice-fresh
-    zola
-    rust-script
-    gh
-    okular
-    freecad-wayland
-    vlc
-    nh
-    samba
     #googleearth-pro
-  ];
-}
