@@ -18,6 +18,7 @@ with pkgs;
     zed-editor
     zola
     ironbar
+    rclone
   ];
 }
     # wineWowPackages.stable
